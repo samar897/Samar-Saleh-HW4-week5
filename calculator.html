@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+<title>Calculator</title>
+
+    </style>
+    </head>
+    <body>
+    <div class="calculator">
+      <input type="text" id="firstNumber" title="h"/>
+      <select id="operator" title="j">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+      <input type="text" id="secondNumber" title="c"/>
+      <button id="calculate">Calculate</button>
+      <div id="result"></div>
+    </div>
+    <script>
+    const firstNumber = document.getElementById("firstNumber");
+    const secondNumber = document.getElementById("secondNumber");
+    const operator = document.getElementById("operator");
+    const calculateButton = document.getElementById("calculate");
+    const result = document.getElementById("result");
+    
+     calculateButton.addEventListener("click", () => {
+      const firstNumberValue = parseFloat(firstNumber.value);
+      const secondNumberValue = parseFloat(secondNumber.value);
+    
+      let resultValue;
+    
+      switch (operator.value) {
+        case "+":
+          resultValue = firstNumberValue + secondNumberValue;
+          break;
+        case "-":
+          resultValue = firstNumberValue - secondNumberValue;
+          break;
+        case "*":
+          resultValue = firstNumberValue * secondNumberValue;
+          break;
+        case "/":
+          resultValue = firstNumberValue / secondNumberValue;
+          break;
+      }
+    
+      result.innerHTML = resultValue;
+    });
+    </script>
+    </body>
+    </html>

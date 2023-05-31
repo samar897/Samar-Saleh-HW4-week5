@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JS4.js"></script>
+</head>
+<body>
+
+<!-- قم بعمل صفحة Html تحتوي على button و p باستخدام js غير قيمة النص عند الضغط على الزر  -->
+
+<p id="text">This is the original text.</p>
+<br/> <br/>
+  <button onclick="changeText()">Change Text</button>
+  <button onclick="setBackground()">Set Background</button>
+  <button onclick="increaseFontSize()">Increase Font Size</button>
+  <button onclick="decreaseFontSize()">Decrease Font Size</button>
+
+  <br/>  <br/>  
+
+  <form action="index.html" method="post">
+    <input type="text" name="item" placeholder="Enter an item">
+    <input type="submit" value="Add Item">
+    </form>
+    
+    <ul id="list"></ul>
+
+    <script>
+ //Create a form that takes data from the user and puts it into a list JS 
+ // Get the form and the list element
+ let form = document.querySelector("form");
+ let list = document.querySelector("#list");
+ 
+ // When the form is submitted, add the item to the list
+ form.addEventListener("submit", function(event) {
+   event.preventDefault();
+ 
+   // Get the value of the input field
+   let item = document.querySelector("input[name=item]").value;
+ 
+   // Create a new list item
+   let li = document.createElement("li");
+   li.textContent = item;
+ 
+   // Add the list item to the list
+   list.appendChild(li);
+ });
+
+    </script>
+   
+<img id="image" src="images/01.jpg" alt="iamge" width="100" height="100"/>
+
+<button id="changeImage">Change Image</button>
+
+<script>
+// Get the image and the button element
+let image = document.getElementById("image");
+let button = document.getElementById("changeImage");
+
+// When the button is clicked, change the image
+button.addEventListener("click", function() {
+  image.src = "images/logo-light.svg";
+});
+</script>
+
+<p id="name"></p>
+
+<script>
+// Get the name element
+//let name = document.getElementById("name");
+
+const nameElement = document.getElementById("name");
+// Change the name value
+nameElement.innerHTML = "Samar";
+
+nameElement.addEventListener("click", () => {
+  const today = new Date();
+  alert(`Today is ${today.toLocaleDateString()}.`);
+});
+
+nameElement.addEventListener("dblclick", () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+  });
+});
+
+</script>
+
+</body>
+</html>
