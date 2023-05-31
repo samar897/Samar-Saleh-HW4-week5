@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .deleteCommentButton {
+  background-color: red;
+  color: white;
+}
+
+.likeButton {
+  background-color: green;
+  color: white;
+}
+    </style>
+<title>My Website</title>
+</head>
+<body>
+    <form action="/comment" method="post">
+        <input type="text" id="commentText" placeholder="Add a comment...">
+        <button type="submit" id="addCommentButton">Add Comment</button>
+      </form>
+      
+      <ul id="commentList">
+        <li>
+          <p>This is a comment.</p>
+          <button class="deleteCommentButton">Delete</button>
+          <button class="likeButton">Like</button>
+        </li>
+        <li>
+          <p>This is another comment.</p>
+          <button class="deleteCommentButton">Delete</button>
+          <button class="likeButton">Like</button>
+        </li>
+      </ul>
+      
+      <script>
+      // Create a button to add a comment
+      var addCommentButton = document.getElementById("addCommentButton");
+      addCommentButton.addEventListener("click", function() {
+        // Get the comment text from the input box
+        var commentText = document.getElementById("commentText").value;
+      
+        // Create a new comment element
+        var comment = document.createElement("li");
+        comment.className = "comment";
+      
+        // Add the comment text to the comment element
+        var commentTextNode = document.createTextNode(commentText);
+        comment.appendChild(commentTextNode);
+      
+        // Append the comment element to the comment list
+        document.getElementById("commentList").appendChild(comment);
+      
+        // Clear the comment text from the input box
+        document.getElementById("commentText").value = "";
+      });
+      
+      // Create a button to delete a comment
+      var deleteCommentButton = document.querySelectorAll(".deleteCommentButton");
+      for (var i = 0; i < deleteCommentButton.length; i++) {
+        deleteCommentButton[i].addEventListener("click", function() {
+          // Get the comment ID from the button
+          var commentId = this.dataset.commentId;
+      
+          // Delete the comment from the DOM
+          document.getElementById(commentId).remove();
+        });
+      }
+      
+      // Create a like button
+      var likeButton = document.querySelectorAll(".likeButton");
+      for (var i = 0; i < likeButton.length; i++) {
+        likeButton[i].addEventListener("click", function() {
+          // Get the comment ID from the button
+          var commentId = this.dataset.commentId;
+      
+          // Increase the like count for the comment
+          var likeCount = document.getElementById(commentId + "-likeCount");
+          likeCount.textContent++;
+        });
+      }
+      </script>
+
+
+
+</body>
+  </html>

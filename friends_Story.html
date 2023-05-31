@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+    <nav  class="navbar navbar-expand-lg" style="background-color: #d3d3d3;" >
+        <div class="container-fluid">
+          <img class="dark-mode-item navbar-brand-item" src="image/logo.png" alt="logo" width="90" height="90">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Lion_Story.html">Lion Story</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="friends_Story.html" >friends Story</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      
+ 
+      <div class="Style1">
+        <h1> Two friends and the Bear</h1>
+        <br/><br/></div>
+        <div class="Style2">
+
+         
+        <div class="card" style="width: 20rem;">
+          <img src="image/two-friends-and-the-bear-story-768x564.jpg" alt="part one"  class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Part one</h5>
+            <p class="card-text">
+              Once there were two friends who were crossing the jungle. After some time they saw a bear coming towards them.
+              Then, one of the friends quickly climbed the nearby tree and the other one did not know how to climb the tree.
+               So he lays down on the ground holding his breath.
+            </p><br/><br/>
+          </div>
+        </div>
+        
+        
+        
+        
+        <div class="card" style="width: 20rem; height: 35rem;">
+          <img src="image/the-bear-and-two-friends-story-768x441.jpg" alt="part two"  class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Part Two</h5>
+            <p class="card-text">
+              The bear reaches near him and sniffs him in the ear. After some time bear left the place, thinking the man is dead.
+              Now the other friend climbs down and asked his friend, what did bear said to him in his ear? He replied,” to be safe from the fake friends.”
+Moral: Beware of fake friends.
+        </p>
+       
+          </div>
+        </div></div>
+
+
+<div class="Style1">  
+
+  <br/>       
+  <h2 style="margin: 10px;">Comments</h2> 
+
+  <br/> <br/>
+        <form action="Commentpage.html" method="post" style="margin: 10px;">
+          <input type="text" name="item" placeholder="Add an Comment">
+          <input type="submit" value="Add Item" class="btn btn-secondary">
+          </form>
+
+<br/> <br/>
+
+  <div id="comments">
+    <ul id="comment-list"></ul>
+    <form id="comment-form">
+  
+      <input type="submit" id="comment-submit" value="delete comment" class="btn btn-secondary">
+    </form>
+  </div>
+  <br/>
+
+       
+          <br/>
+     
+          <p>The Comment are: </p>
+          <ul id="list"></ul>
+    
+          <script>
+            //Create a form that takes data from the user and puts it into a list JS 
+            // Get the form and the list element
+            let form = document.querySelector("form");
+            let list = document.querySelector("#list");
+            
+            // When the form is submitted, add the item to the list
+            form.addEventListener("submit", function(event) {
+              event.preventDefault();
+            
+              // Get the value of the input field
+              let item = document.querySelector("input[name=item]").value;
+            
+              // Create a new list item
+              let li = document.createElement("li");
+              li.textContent = item;
+            
+              // Add the list item to the list
+              list.appendChild(li);
+            });
+           
+               </script>
+            
+         
+  
+</div> 
+
+
+
+ 
+
+  <!-- Copyright -->
+  <div class="text-center p-4 mt-3" style="background-color: rgba(0, 0, 0, 0.2); ">
+    © 2023 Copyright:
+    Build Successful Websites With Samar ❤️
+  </div>
+
+    <!-- Copyright -->
+  </footer>
+    
+  
+      <!-- =======================
+      Footer END -->
+      
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</html>
